@@ -79,6 +79,7 @@
     <ClInclude Include="DataBase.h" />
     <ClInclude Include="Day.h" />
     <ClInclude Include="FrontImage .h" />
+    <ClInclude Include="Ingredient.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="PlanManager.h" />
     <ClInclude Include="Recipe.h" />
