@@ -4,8 +4,23 @@
 
 
 Interface::Interface() {
+		printTitleMenu();
 		frontImage.printImage();		// 초기화면 출력
 		showTodayInformation();
+}
+
+void Interface::printTitleMenu(){
+
+	string line;
+	ifstream inFile("Titlemenu.txt", ios::in);
+
+	if (inFile.is_open()) {
+		while (getline(inFile, line)) {
+			system("Color 78");
+			std::cout << line;
+		}
+		inFile.close();
+	}
 }
 
 void Interface::showFrontMenu(){
@@ -73,7 +88,7 @@ void Interface::showDayPlan(){
 		cout << "날짜를 잘못입력하셨습니다. 확인할 날짜를 입력하세요 : ";
 		std::cin >> date;
 	}
-
+	
 	planmanager.showDailyPlan(date);
 
 }
@@ -109,7 +124,7 @@ void Interface::editDayPlan()
 
 		if (menu == 1)
 		{
-			dataBase.dishSearch("");
+			//dataBase.dishSearch("");
 		}
 		else if (menu == 2)
 		{
