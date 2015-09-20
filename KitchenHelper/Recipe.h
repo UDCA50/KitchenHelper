@@ -1,5 +1,6 @@
 /*
  * 요리에 대한 정보들을 담고있는 header.
+ * Created by 신영현/남성준/최연호
  */
 
 #include "Ingredient.h"
@@ -25,9 +26,7 @@ private:
 	int getIngredientAmount(int ingredientNumber);							//몇번째 재료의 재료량을 반환.
 	void setIngredientAmount(int amount);
 	void setIngredientAmount(int amount,int ingredientNumber);			//현재 재료의 재료량을 설정(수정)
-	char* getRecipedOfDish(int ingredientNumber);						//몇번째 조리법을 반환.
-	void setRecipeOfDish(char* recipeOfDish);
-	void setRecipedOfDish(char* recipeOfDish,int ingredientNumber);		//현재 조리법을 수정
+										//몇번째 조리법을 반환.
 
 	void ingredientDelete(int ingredientNumber); 	//재료 삭제
 
@@ -36,6 +35,7 @@ private:
 public:
 	Recipe(char* name);				//생성자
 									//요리명을 입력받음
+	char* getRecipedOfDish();
 
 	//gt영역
 	char* getDishName();			//요리명 얻기 ->list 출력에 필요
@@ -47,8 +47,8 @@ public:
 	void ingredientModify(int ingredientNumber);	//재료 수정/삭제
 													//재료의 번수를 매개변수로 받아서
 													//재료명 변경->setIngredientName, 양->setIngredientAmount
-	void recipedOfDishAdd(char* recipeOfDish);		//요리의 조리법 추가
+	void setRecipeOfDish(char* recipeOfDish);
 
 	//show영역
-	void showAllRecipeInformation(int numberOfDish);	//dishName출력, for문으로 재료명/량 모두출력, recipeOfDish출력
+	void showAllRecipeInformation();	//dishName출력, for문으로 재료명/량 모두출력, recipeOfDish출력
 };

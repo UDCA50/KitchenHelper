@@ -1,20 +1,27 @@
-﻿Build started 2015-09-20 오후 7:24:42.
+﻿Build started 2015-09-20 오후 7:31:31.
      1>Project "C:\Users\lenovo\Documents\GitHub\KitchenHelper\KitchenHelper\KitchenHelper.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Interface.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ingredient.cpp Interface.cpp Recipe.cpp
+         Recipe.cpp
+     1>c:\users\lenovo\documents\github\kitchenhelper\kitchenhelper\recipe.cpp(138): warning C4018: '<' : signed/unsigned mismatch
          Interface.cpp
      1>c:\users\lenovo\documents\github\kitchenhelper\kitchenhelper\interface.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Ingredient.cpp
+         Generating Code...
      1>c:\users\lenovo\documents\github\kitchenhelper\kitchenhelper\interface.cpp(101): warning C4700: uninitialized local variable 'day' used
+     1>c:\users\lenovo\documents\github\kitchenhelper\kitchenhelper\recipe.cpp(112): warning C4700: uninitialized local variable 'modifyName' used
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lenovo\Documents\GitHub\KitchenHelper\Debug\KitchenHelper.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\lenovo\Documents\GitHub\KitchenHelper\Debug\KitchenHelper.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lenovo\Documents\GitHub\KitchenHelper\Debug\KitchenHelper.lib" /MACHINE:X86 Debug\DataBase.obj
          Debug\Day.obj
          Debug\FrontImage.obj
+         Debug\Ingredient.obj
          Debug\Interface.obj
          Debug\Main.obj
          Debug\PlanManager.obj
+         Debug\Recipe.obj
          KitchenHelper.vcxproj -> C:\Users\lenovo\Documents\GitHub\KitchenHelper\Debug\KitchenHelper.exe
      1>Done Building Project "C:\Users\lenovo\Documents\GitHub\KitchenHelper\KitchenHelper\KitchenHelper.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.30
+Time Elapsed 00:00:04.99

@@ -4,7 +4,7 @@
 
 
 Interface::Interface() {
-		printTitleMenu();
+		//printTitleMenu();
 		frontImage.printImage();		// 초기화면 출력
 		showTodayInformation();
 }

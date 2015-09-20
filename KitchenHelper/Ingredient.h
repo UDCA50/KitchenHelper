@@ -1,5 +1,6 @@
 /*
  * 레시피에 들어갈 재료.
+ * Created by 신영현/남성준/최연호
  */
 
 #pragma once
