@@ -1,3 +1,4 @@
+#pragma once
 #include"Recipe.h"
 #include <vector>
 
@@ -58,5 +59,6 @@ public:
 	Recipe showRecipeOfDish(char* dishName);			//dishName를 매개변수로 받아서
 	//getRecipe();
 	Recipe getRecipe();
+
 
 };

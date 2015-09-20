@@ -1,7 +1,8 @@
+#pragma once
+
 #include"DataBase.h"
 #include"FrontImage .h"
 #include"PlanManager.h"
-
 
 
 class Interface{
@@ -16,13 +17,16 @@ private:
 	void showDayPlan();		// 특정날짜의 계획을 보여주는 매소드
 
 	void editDayPlan();		// 특정날짜의 계획을 편집하는 매소드
+	
 	void editDayPlan(const char* dishName);	//특정 요리이름을 받아, 특정날짜의 식단을 변경하는 매소드 
 
+	void loadFileData(DataBase &dataBase, PlanManager &planmanager);	//저장된 레서피, 계획 정보를 불러오는 매소드
+	void saveFileData(DataBase &dataBase, PlanManager &planmanager);
 public:
 	Interface(){
 		frontImage.printImage();		// 초기화면 출력
+		showTodayInformation();
 	}
 	void showFrontMenu();	//처음 메뉴를 보여주는 함수 (1번~8번)
-
-
+	
 };
