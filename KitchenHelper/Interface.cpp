@@ -2,6 +2,12 @@
 #include"Interface.h"
 #include<iostream>
 
+
+Interface::Interface() {
+		frontImage.printImage();		// 초기화면 출력
+		showTodayInformation();
+}
+
 void Interface::showFrontMenu(){
 
 	int userInput = 0; 

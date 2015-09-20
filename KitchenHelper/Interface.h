@@ -23,10 +23,7 @@ private:
 	void loadFileData(DataBase &dataBase, PlanManager &planmanager);	//저장된 레서피, 계획 정보를 불러오는 매소드
 	void saveFileData(DataBase &dataBase, PlanManager &planmanager);
 public:
-	Interface(){
-		frontImage.printImage();		// 초기화면 출력
-		showTodayInformation();
-	}
+	Interface();
 	void showFrontMenu();	//처음 메뉴를 보여주는 함수 (1번~8번)
 	
 };

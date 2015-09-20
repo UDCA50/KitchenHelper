@@ -85,6 +85,7 @@
     <ClInclude Include="Recipe.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="Day.cpp" />
     <ClCompile Include="FrontImage.cpp" />
     <ClCompile Include="Interface.cpp" />
