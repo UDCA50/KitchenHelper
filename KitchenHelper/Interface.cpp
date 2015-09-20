@@ -65,10 +65,78 @@ void Interface::showFrontMenu(){
 
 void Interface::showDayPlan(){
 
+	int date;
+	std::cout << "확인할 날짜를 입력하세요 : ";
+	std::cin >> date;
+
+	while (date<1 || date>30) {
+		cout << "날짜를 잘못입력하셨습니다. 확인할 날짜를 입력하세요 : ";
+		std::cin >> date;
+	}
+
+	planmanager.showDailyPlan(date);
+
 }
 
 
-void Interface::editDayPlan(){
+void Interface::editDayPlan()
+{
+	int day;
+	int menu;
+	Day myDay = planmanager.getDailyPlan(day);
+
+	/* 1. 날짜 입력 */
+	while (1)
+	{
+		cin >> day;
+
+		if (1 <= day && day <= 31)
+			break;
+		else
+			cout << "1에서 31 사이의 수만 입력하세요" << endl;
+	
+	}
+
+	/* 2. 메뉴 */
+	while (1)
+	{
+
+		myDay.showTodayData();
+		cout << "1. 아침메뉴 수정하기" << endl << "2. 점심메뉴 수정하기" << endl << "3. 저녁메뉴 수정하기" << endl 
+			 << "4. 일정추가하기" << endl << "5. 일정삭제하기" << endl;
+	
+		cin >> menu;
+
+		if (menu == 1)
+		{
+			dataBase.dishSearch("");
+		}
+		else if (menu == 2)
+		{
+		
+		}
+		else if (menu == 3)
+		{
+
+		}
+		else if (menu == 4)
+		{
+
+		}
+		else if (menu == 5)
+		{
+
+		}
+		else
+		{
+
+		}
+	
+	
+	}
+
+
+	planmanager.changeDate(myDay, day);
 
 }
 

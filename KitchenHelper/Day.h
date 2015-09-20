@@ -19,6 +19,6 @@ private:
 
 public:
 	Day();
-	void showDate();		//오늘 계획(식사,일정을) 출력해줌
+	void showTodayData();		//오늘 계획(식사,일정을) 출력해줌
 
 };
