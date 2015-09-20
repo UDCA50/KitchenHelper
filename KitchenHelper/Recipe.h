@@ -1,3 +1,7 @@
+/*
+ * 요리에 대한 정보들을 담고있는 header.
+ */
+
 #include "Ingredient.h"
 #include<vector>
 
@@ -5,42 +9,46 @@
 class Recipe{
 
 private:
-	char* dishName; //요리
-	std::vector<Ingredient> ingredient; //재료
-	int ingredientCount;  //재료수
-	char*  recipeOfDish; //요리조리법
+	char* dishName;									//요리명
+	vector<Ingredient> ingredient;					//재료
+	int ingredientCount;							//재료수
+	char*  recipeOfDish;							//요리조리법
 	
-	int findNumberOfIngredient();	//현재 재료의 갯수를 반환 
-	int getIngredientAmount(int ingredientNumber);
-	char* getIngredientName(int ingredientNumber);
-	void setIngredientName(char* name);
+	int findNumberOfIngredient(char* name);			//현재 재료의 번호를 반환. (몇번째 재료인지) 
+													//매개변수 재료명
+	
+	char* getIngredientName(int ingredientNumber);							//몇번째 재료의 재료명을 반환
+	void setIngredientName(char* name);										//현재 재료의 재료명을 설정
+	void setIngredientName(char* name, int ingredientNumber);				//재료명 수정
+																			//재료명을 매개변수로 얻어서 ingredientName 수정
+																			//setName()
+	int getIngredientAmount(int ingredientNumber);							//몇번째 재료의 재료량을 반환.
 	void setIngredientAmount(int amount);
+	void setIngredientAmount(int amount,int ingredientNumber);			//현재 재료의 재료량을 설정(수정)
+	char* getRecipedOfDish(int ingredientNumber);						//몇번째 조리법을 반환.
+	void setRecipeOfDish(char* recipeOfDish);
+	void setRecipedOfDish(char* recipeOfDish,int ingredientNumber);		//현재 조리법을 수정
 
+	void ingredientDelete(int ingredientNumber); 	//재료 삭제
+
+	void showIngredient(int ingredientNumber);		//몇번째 재료정보를 보여주기 ->getIngredientName/getIngredientAmount 이용
 
 public:
-	void setDishName(char* name);		//요리의 이름을 입력
-	
-	void ingredientAdd(char* name, int Amount);    //재료 추가
-	//이름 ,양 set
+	Recipe(char* name);				//생성자
+									//요리명을 입력받음
 
-	void ingredientModify(); //재료 수정
+	//gt영역
+	char* getDishName();			//요리명 얻기 ->list 출력에 필요
 
-	void modifyDishName(char* name); 	//요리명 수정
-	//name을 매개변수로 얻어서 dishName을 수정
+	//set영역
+	void ingredientAdd(char* name, int amount);		//재료 추가
+													//이름 ,양 set 이때 ingredientCount++;
+	void setDishName(char* name);					//요리의 이름을 입력(수정)
+	void ingredientModify(int ingredientNumber);	//재료 수정/삭제
+													//재료의 번수를 매개변수로 받아서
+													//재료명 변경->setIngredientName, 양->setIngredientAmount
+	void recipedOfDishAdd(char* recipeOfDish);		//요리의 조리법 추가
 
-	void modifyIngredientName(char* name);	//재료명 수정
-	//재료명을 매개변수로 얻어서 ingredientName 수정
-	//setName()
-
-	void ingredientDelete(char* name); 	//재료 삭제
-	//재료명을 매개변수로 얻어서 재료 삭제
-	void setRecipeOfDish(char* recipeOfDish);	//조리법 set
-	char* getRecipeOfDish(); 		//조리법반환
-	void modifyRecipeOfDish();
-
-	char* getDishName(); //요리명 얻기 ->list 출력에 필요
-
-	void showAllRecipeInformation();	//dishName출력, for문으로 재료명/량 모두출력, recipeOfDish출력
-
-
+	//show영역
+	void showAllRecipeInformation(int numberOfDish);	//dishName출력, for문으로 재료명/량 모두출력, recipeOfDish출력
 };
